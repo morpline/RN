@@ -1,0 +1,73 @@
+{
+    "menu":[
+        {
+            "id":0,
+            "name":"california roll",
+            "calories":490,
+            "ingredients":[
+                "nori",
+                "avocado",
+                "rice",
+                "imitation crab",
+                "imitation wasabi (horseradish)"
+            ],
+            "price": 4.99,
+            "type":"appetizer",
+            "class":"none"
+        },
+        {
+            "id":1,
+            "name":"sauteed zuchinni",
+            "calories":240,
+            "ingredients":[
+                "garlic",
+                "zuchinni",
+                "rosemary",
+                "thyme",
+                "butter"
+            ],
+            "price": 2.99,
+            "type":"appetizer",
+            "allergens":["dairy"],
+            "class":"vegetarian"
+        },
+        {
+            "id":2,
+            "name":"sashimi",
+            "calories":160,
+            "ingredients":[
+                "rice",
+                "fermented fish"
+            ],
+            "price": 5.99,
+            "type":"appetizer",
+            "allergens":["seafood"],
+            "class":"pescatarian"
+        },
+        {
+            "id":3,
+            "name":"pork chops",
+            "calories":860,
+            "ingredients":[
+                "pork chops",
+                "spices",
+                "fresh garlic"
+            ],
+            "price": 8.99,
+            "type":"entree",
+            "class":"none"
+        }
+    ],
+    "categories":[
+        {
+            "name":"japanese",
+            "foods":[0,2],
+            "id":0
+        },
+        {
+            "name":"sunday dinner",
+            "foods":[1,3],
+            "id":1
+        }
+    ]
+}
