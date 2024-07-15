@@ -12,7 +12,8 @@ function UserInfo(props) {
         navigation.navigate("Login", { login: false });
     }
     function logoutHandler() {
-        // navigation.navigate("Login", { login: true });
+        suthcontxt.logout();
+        navigation.navigate("Login", { login: true });
     }
     if (!suthcontxt.isAuthenticated) {
         return (
