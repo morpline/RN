@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 import Menu from "@/screens/Menu";
 import UserInfo from "@/screens/UserInfo";
+import List from "@/screens/List";
 import Login from "@/components/Login";
 import styles from "@/components/styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -41,6 +42,17 @@ function UserStackScreen() {
     );
 }
 
+const ListStack = createNativeStackNavigator();
+
+function ListStackScreen() {
+    return (
+        <ListStack.Navigator screenOptions={{ headerShown: false }}>
+            <ListStack.Screen name="Main" component={List} />
+            <ListStack.Screen name="Login" component={Login} />
+        </ListStack.Navigator>
+    );
+}
+
 
 
 
@@ -70,13 +82,17 @@ export default function MyStack() {
                     <Tab.Navigator
                         screenOptions={({ route }) => ({
                             tabBarIcon: ({ focused, size }) => {
-                                let iconName;
+                                let iconName = "bug";
 
-                                if (route.name === "Main") {
+                                if (route.name === "Menu") {
                                     iconName = focused
                                         ? "calendar"
                                         : "calendar-outline";
-                                } else if (route.name === "") {
+                                } else if (route.name === "Profile") {
+                                    iconName = focused
+                                        ? "person"
+                                        : "person-outline";
+                                } else if (route.name === "List") {
                                     iconName = focused
                                         ? "ellipsis-horizontal"
                                         : "ellipsis-horizontal-outline";

@@ -32,7 +32,7 @@ function UserInfo(props) {
         <>
             <RN.View style={styles.root}>
                 <RN.View style={styles.header}>
-                    <RN.Text style={styles.logo}>User Info</RN.Text>
+                    <RN.Text style={styles.logo}>User</RN.Text>
                     <RN.Pressable onPress={logoutHandler} style={styles.item}>
                         <RN.Text style={styles.fancy}>Log Out</RN.Text>
                     </RN.Pressable>
